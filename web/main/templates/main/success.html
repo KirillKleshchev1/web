@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Успех{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <p>Столик успешно забронирован</p>
+        <a href="{% url 'home' %}"><button class="btn btn-warning">На главную</button></a>
+    </div>
+{% endblock %}

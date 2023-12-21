@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Ошибка{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <p>Неверные данные. Попробуйте еще раз</p>
+        <a href="{% url 'home' %}"><button class="btn btn-warning">На главную</button></a>
+    </div>
+{% endblock %}

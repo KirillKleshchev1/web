@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <p>Для бронирования столика нажмите на кнопку и заполните форму</p>
+        <a href="{% url 'create' %}"><button class="btn btn-info" class="fas fa-plus-circle">Забронировать</button></a>
+    </div>
+{% endblock %}
