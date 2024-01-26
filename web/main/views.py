@@ -61,8 +61,10 @@ def create(request):
 def error(request):
     return render(request, 'main/error.html')
 
+
 def error_book(request):
     return render(request, 'main/error_book.html')
+
 
 def success(request):
     return render(request, 'main/success.html')
@@ -76,9 +78,12 @@ def records(request):
 
 @login_required
 def delete_record(request, record_id):
+    form = Reservation.objects.get(id=record_id)
+    for i in range(int(form.count_hour)):
+        count_tables[str(form.date)][i + int(form.time)] += \
+            int(form.count)
     Reservation.objects.filter(id=record_id).delete()
     return render(request, 'main/delete_success.html')
-
 
 @login_required
 def delete_success(request):

@@ -13,7 +13,7 @@
                 <p>Дата: {{ r.date }}</p>
                 <p>Время начала брони: {{ r.time }}</p>
                 <p>На сколько часов: {{ r.count_hour }}</p>
-                <a href="{% url 'delete' record_id=r.id %}"><button class="btn btn-info" type="submit" id="btn1">
+                <a href="{% url 'delete' record_id=r.id %}"><button class="btn btn-danger" type="submit" id="btn1">
                     Удалить запись
                 </button></a>
             </div>
