@@ -16,7 +16,7 @@ class UserRegisterForm(UserCreationForm):
 class ReservationForm(ModelForm):
     class Meta:
         model = Reservation
-        fields = ['username', 'phone_number', 'email', 'count', 'date']
+        fields = ['username', 'phone_number', 'email', 'count', 'date', 'time', 'count_hour']
 
         widgets = {
             "username": TextInput(attrs={
@@ -36,11 +36,21 @@ class ReservationForm(ModelForm):
 
             "count": TextInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Количество человек'
+                'placeholder': 'Количество столиков'
             }),
 
             "date": DateTimeInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Дата'
+            }),
+
+            "time": DateTimeInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Время'
+            }),
+
+            "count_hour": DateTimeInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'На сколько часов'
             }),
         }

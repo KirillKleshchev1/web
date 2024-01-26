@@ -9,10 +9,15 @@
                 <p>ФИО: {{ r.username }}</p>
                 <p>Номер телефона: {{ r.phone_number }}</p>
                 <p>Почта: {{ r.email }}</p>
-                <p>Количество человек: {{ r.count }}</p>
+                <p>Количество столиков: {{ r.count }}</p>
                 <p>Дата: {{ r.date }}</p>
+                <p>Время начала брони: {{ r.time }}</p>
+                <p>На сколько часов: {{ r.count_hour }}</p>
+                <a href="{% url 'delete' record_id=r.id %}"><button class="btn btn-info" type="submit" id="btn1">
+                    Удалить запись
+                </button></a>
             </div>
         {% endfor %}
-        <a href="{% url 'home' %}"><button class="btn btn-warning">На главную</button></a>
+        <a href="{% url 'home' %}"><button class="btn btn-warning" id="btn">На главную</button></a>
     </div>
 {% endblock %}

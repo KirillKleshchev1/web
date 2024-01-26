@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Ошибка времени бронирования{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <p>На это время столиков нет</p>
+        <a href="{% url 'create' %}"><button class="btn btn-warning">Забронировать</button></a>
+    </div>
+{% endblock %}

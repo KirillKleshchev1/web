@@ -53,8 +53,10 @@ main.features p {
     float:left;
     clear:both;
     width: 400px;
-    margin: 20px 39%;
+    margin: 20px 50%;
     text-align: center;
+    position: relative;
+    transform: translate(-50%, 0);
 }
 
 #login1 {
